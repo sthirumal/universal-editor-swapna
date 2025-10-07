@@ -212,6 +212,13 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "smallText",
+        "value": "This is a test small-text",
+        "label": "Small Text",
+        "valueType": "string"
       }
     ]
   }
