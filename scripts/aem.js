@@ -635,6 +635,18 @@ async function loadFooter(footer) {
 }
 
 /**
+ * Fetches placeholder text values from metadata or returns default values
+ * @returns {Object} Object containing placeholder text values
+ */
+function fetchPlaceholders() {
+  const placeholders = {
+    searchPlaceholder: getMetadata('search-placeholder') || 'Search...',
+    searchNoResults: getMetadata('search-no-results') || 'No results found.',
+  };
+  return placeholders;
+}
+
+/**
  * Wait for Image.
  * @param {Element} section section element
  */
@@ -698,6 +710,7 @@ export {
   decorateIcons,
   decorateSections,
   decorateTemplateAndTheme,
+  fetchPlaceholders,
   getMetadata,
   loadBlock,
   loadCSS,
